@@ -126,8 +126,8 @@ void loop() {
   delay(100);  // Check every 100ms
 }
 
+// ---------------------------------------------------------------------Below code is for writing the NodeID in EPROM of the Node---------------------------------------------------------------------------------------------
 // #include <EEPROM.h>
-
 // void setup() {
 //   Serial.begin(9600);
 //   EEPROM.begin(512);
