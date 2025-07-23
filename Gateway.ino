@@ -5,12 +5,12 @@
 #include <PubSubClient.h>
 
 // --------------------- WiFi & ThingsBoard Config ---------------------
-const char* ssid = "Nothing Phone";
-const char* password = "1919216153";
+const char* ssid = "Your SSID";
+const char* password = "Password";
 
 const char* tbServer = "demo.thingsboard.io";
 const int tbPort = 1883;
-const char* tbToken = "FqqxKixlaCMR6OITz8Fc";  // Replace with actual token
+const char* tbToken = "";  // Replace with actual token
 
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
@@ -34,8 +34,8 @@ byte aes_iv[N_BLOCK] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 
 // --------------------- Authorized DevEUIs ---------------------
 const char* allowedDevEUIs[] = {
-  "0000FFFECE80E001",
-  "0000FFFE98EE4901"
+  "replace with your actual DevEUI",
+  "replace with your actual DevEUI"
 };
 const int numAllowed = sizeof(allowedDevEUIs) / sizeof(allowedDevEUIs[0]);
 
