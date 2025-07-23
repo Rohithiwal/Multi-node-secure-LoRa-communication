@@ -14,8 +14,8 @@
 #define CHANNEL            17
 #define SLOT_DURATION_MS   2000      // 2 sec per slot
 #define TDMA_CYCLE_MS      6000      // Total cycle = 2 nodes
-#define WIFI_SSID          "Nothing Phone"
-#define WIFI_PASS          "1919216153"
+#define WIFI_SSID          "Your SSID"
+#define WIFI_PASS          "Password"
 
 // -------------------- AES Setup ----------------------------
 AESLib aesLib;
@@ -23,7 +23,7 @@ byte aes_key[] = {
   0x87, 0x1F, 0x3C, 0x46, 0x2A, 0xB0, 0x90, 0xEE,
   0x54, 0x75, 0x61, 0x97, 0xCC, 0x21, 0xD3, 0x42
 };
-byte aes_iv[N_BLOCK] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+byte aes_iv[N_BLOCK] = {#generate 16 byte unique id};
 
 // ------------------- LoRa & EEPROM -------------------------
 LoRa_E22 e22ttl(D3, D4);  
@@ -125,13 +125,15 @@ void loop() {
 
   delay(100);  // Check every 100ms
 }
+
+// ---------------------------------------------------------------------Below code is for writing the NodeID in EPROM of the Node---------------------------------------------------------------------------------------------
 // #include <EEPROM.h>
 
 // void setup() {
 //   Serial.begin(9600);
 //   EEPROM.begin(512);
 
-//   // Set this to 0 or 1 depending on which node you're programming
+//   // Set this to 0,1, etc. based on number of nodes you have
 //   byte nodeId = 1;
 
 //   EEPROM.write(8, nodeId);
