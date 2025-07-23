@@ -14,8 +14,8 @@
 #define CHANNEL            17
 #define SLOT_DURATION_MS   2000      // 2 sec per slot
 #define TDMA_CYCLE_MS      6000      // Total cycle = 2 nodes
-#define WIFI_SSID          "Nothing Phone"
-#define WIFI_PASS          "1919216153"
+#define WIFI_SSID          "Your SSID"
+#define WIFI_PASS          "Password"
 
 // -------------------- AES Setup ----------------------------
 AESLib aesLib;
@@ -125,6 +125,7 @@ void loop() {
 
   delay(100);  // Check every 100ms
 }
+
 // #include <EEPROM.h>
 
 // void setup() {
