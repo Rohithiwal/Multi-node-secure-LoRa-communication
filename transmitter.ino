@@ -23,7 +23,7 @@ byte aes_key[] = {
   0x87, 0x1F, 0x3C, 0x46, 0x2A, 0xB0, 0x90, 0xEE,
   0x54, 0x75, 0x61, 0x97, 0xCC, 0x21, 0xD3, 0x42
 };
-byte aes_iv[N_BLOCK] = {#generate 16 byte unique id};
+byte aes_iv[N_BLOCK] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
 
 // ------------------- LoRa & EEPROM -------------------------
 LoRa_E22 e22ttl(D3, D4);  
